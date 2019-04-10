@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="fontawesome-free-5.7.2-web\css\all.css">
+    <style>
+      .signup{
+        background-color: black;
+        height:550px;
+        width:400px;
+        position: absolute;
+        left:850px;
+        top:80px;
+        border:1px solid gray;
+        border-radius: 10px;
+        opacity: 0.85;
+      }
+      .form{
+        margin-left: 40px;
+        margin-top: 40px;
+        background-color: black;
+        height: 85%;
+        width: 80%;
+      }
+      body{
+        margin:0;
+        font-family: verdana;
+        background-image: url("signinimage.jpg");
+        background-size: cover;
+      }
+      .input{
+        height: 40px;
+        width:70%;
+        border-radius: 5px;
+        border:none;
+        font-size: 16px;
+        border:2px solid dodgerblue;
+        background-color: #BDC3C7;
+      }
+      .input:focus{
+        border:1px solid dodgerblue;
+        background-color: white;
+      }
+      .submit{
+        padding: 14px 26px;
+        border-radius: 6px;
+        border:1px solid silver;
+        background-color: dodgerblue;
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        left:140px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      h2{
+        color:white;
+      }
+      h1{
+        color:white;
+      }
+      .logo{
+        height: 90px;
+        width: 90px;
+        margin: 15px;
+      }
+    </style>
+    <script>
+      function validateform(){
+        var x=document.forms["signupform"]["email"].value;
+        var y=document.forms["signupform"]["username"].value;
+        var z=document.forms["signupform"]["password"].value;
+        if(x=="" | y=="" | z==""){
+          alert("No field/fields should empty!!! please fill all fields");
+          return false;
+        }
+        else if(x=="" && y=="" && z==""){
+          alert("No field/fields should empty!!! please fill all fields");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="signup">
+      <div class="form">
+        <h1>Bus Management System</h1><br>
+        <h2>Sign up<h2>
+        <form action="index.html" name="signupform" onsubmit="return validateform()" method="post">
+          <input type="email" name="email" title="Email" placeholder="Email" class="input"><br><br>
+          <input type="text" name="username" title="Username" placeholder="Username" class="input"><br><br>
+          <input type="password" name="password" title="Create Password" placeholder="Create Password" class="input"><br><br>
+          <input type="submit" class="submit" title="Submit" value="Submit"><br>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
